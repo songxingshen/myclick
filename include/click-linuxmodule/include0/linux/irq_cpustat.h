@@ -1,0 +1,36 @@
+/* created by click/linuxmodule/fixincludes.pl on Tue Nov 25 22:39:36 2014 */
+/* from /lib/modules/2.6.27.5-117.fc10.i686/build/include/linux/irq_cpustat.h */
+#ifndef __irq_cpustat_h
+#if defined(__cplusplus) && !CLICK_CXX_PROTECTED
+# error "missing #include <click/cxxprotect.h>"
+#endif
+#define __irq_cpustat_h
+
+/*
+ * Contains default mappings for irq_cpustat_t, used by almost every
+ * architecture.  Some arch (like s390) have per cpu hardware pages and
+ * they define their own mappings for irq_stat.
+ *
+ * Keith Owens <kaos@ocs.com.au> July 2000.
+ */
+
+
+/*
+ * Simple wrappers reducing source bloat.  Define all irq_stat fields
+ * here, even ones that are arch dependent.  That way we get common
+ * definitions instead of differing sets for each arch.
+ */
+
+#ifndef __ARCH_IRQ_STAT
+extern irq_cpustat_t irq_stat[];		/* defined in asm/hardirq.h */
+#define __IRQ_STAT(cpu, member)	(irq_stat[cpu].member)
+#endif
+
+  /* arch independent irq_stat fields */
+#define local_softirq_pending() \
+	__IRQ_STAT(smp_processor_id(), __softirq_pending)
+
+  /* arch dependent irq_stat fields */
+#define nmi_count(cpu)		__IRQ_STAT((cpu), __nmi_count)	/* i386 */
+
+#endif	/* __irq_cpustat_h */

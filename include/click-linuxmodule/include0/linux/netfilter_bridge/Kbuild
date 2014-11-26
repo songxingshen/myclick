@@ -1,0 +1,22 @@
+/* created by click/linuxmodule/fixincludes.pl on Tue Nov 25 22:39:41 2014 */
+/* from /lib/modules/2.6.27.5-117.fc10.i686/build/include/linux/netfilter_bridge/Kbuild */
+#if defined(__cplusplus) && !CLICK_CXX_PROTECTED
+# error "missing #include <click/cxxprotect.h>"
+#endif
+header-y += ebt_among.h
+header-y += ebt_arp.h
+header-y += ebt_arpreply.h
+header-y += ebt_ip.h
+header-y += ebt_limit.h
+header-y += ebt_log.h
+header-y += ebt_mark_m.h
+header-y += ebt_mark_t.h
+header-y += ebt_nat.h
+header-y += ebt_pkttype.h
+header-y += ebt_redirect.h
+header-y += ebt_stp.h
+header-y += ebt_ulog.h
+header-y += ebt_vlan.h
+
+unifdef-y += ebtables.h
+unifdef-y += ebt_802_3.h

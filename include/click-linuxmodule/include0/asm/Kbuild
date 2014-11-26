@@ -1,0 +1,29 @@
+/* created by click/linuxmodule/fixincludes.pl on Tue Nov 25 22:39:35 2014 */
+/* from /lib/modules/2.6.27.5-117.fc10.i686/build/include/asm/Kbuild */
+#if defined(__cplusplus) && !CLICK_CXX_PROTECTED
+# error "missing #include <click/cxxprotect.h>"
+#endif
+include include/asm-generic/Kbuild.asm
+
+header-y += boot.h
+header-y += bootparam.h
+header-y += debugreg.h
+header-y += ldt.h
+header-y += msr-index.h
+header-y += prctl.h
+header-y += ptrace-abi.h
+header-y += sigcontext32.h
+header-y += ucontext.h
+header-y += processor-flags.h
+
+unifdef-y += e820.h
+unifdef-y += ist.h
+unifdef-y += mce.h
+unifdef-y += msr.h
+unifdef-y += mtrr.h
+unifdef-y += posix_types_32.h
+unifdef-y += posix_types_64.h
+unifdef-y += unistd_32.h
+unifdef-y += unistd_64.h
+unifdef-y += vm86.h
+unifdef-y += vsyscall.h

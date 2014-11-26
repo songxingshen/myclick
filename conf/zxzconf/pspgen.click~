@@ -1,0 +1,2 @@
+FastPSPSource(2, 2000, 128, 00:0C:29:4E:21:94, 0x040C010B, 2345,00:0C:29:3A:7B:9E,0x020C010B,2346) -> PSPPrint() -> ToDevice(eth1);
+

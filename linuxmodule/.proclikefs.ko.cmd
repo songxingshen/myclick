@@ -1,0 +1,1 @@
+cmd_/home/user/Documents/click-2.0.1/linuxmodule/proclikefs.ko := ld -r -m elf_i386  --build-id -o /home/user/Documents/click-2.0.1/linuxmodule/proclikefs.ko /home/user/Documents/click-2.0.1/linuxmodule/proclikefs.o /home/user/Documents/click-2.0.1/linuxmodule/proclikefs.mod.o

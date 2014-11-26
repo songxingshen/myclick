@@ -1,0 +1,16 @@
+/* created by click/linuxmodule/fixincludes.pl on Tue Nov 25 22:39:35 2014 */
+/* from /lib/modules/2.6.27.5-117.fc10.i686/build/include/drm/Kbuild */
+#if defined(__cplusplus) && !CLICK_CXX_PROTECTED
+# error "missing #include <click/cxxprotect.h>"
+#endif
+unifdef-y += drm.h drm_sarea.h drm_mode.h
+unifdef-y += i810_drm.h
+unifdef-y += i830_drm.h
+unifdef-y += i915_drm.h
+unifdef-y += mga_drm.h
+unifdef-y += r128_drm.h
+unifdef-y += radeon_drm.h
+unifdef-y += sis_drm.h
+unifdef-y += savage_drm.h
+unifdef-y += via_drm.h
+unifdef-y += nouveau_drm.h

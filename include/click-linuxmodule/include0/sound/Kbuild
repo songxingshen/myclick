@@ -1,0 +1,15 @@
+/* created by click/linuxmodule/fixincludes.pl on Tue Nov 25 22:39:34 2014 */
+/* from /lib/modules/2.6.27.5-117.fc10.i686/build/include/sound/Kbuild */
+#if defined(__cplusplus) && !CLICK_CXX_PROTECTED
+# error "missing #include <click/cxxprotect.h>"
+#endif
+header-y += asound_fm.h
+header-y += hdsp.h
+header-y += hdspm.h
+header-y += sfnt_info.h
+header-y += sscape_ioctl.h
+
+unifdef-y += asequencer.h
+unifdef-y += asound.h
+unifdef-y += emu10k1.h
+unifdef-y += sb16_csp.h

@@ -1,0 +1,15 @@
+// test3.click
+
+// This simple test demonstrates how RoundRobinSched works as a round robin
+// scheduler.
+
+// Run with 'click test3.click'
+
+rr :: RoundRobinSched;
+
+TimedSource(0.2) -> Queue(20) -> [0]rr;
+TimedSource(0.2) -> Queue(20) -> [1]rr;
+TimedSource(0.2) -> Queue(20) -> [2]rr;
+TimedSource(0.2) -> Queue(20) -> [3]rr;
+
+rr -> Print() -> TimedSink(0.1);
