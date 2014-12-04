@@ -1,4 +1,4 @@
-src::FastPSPSource(2, 1000000000, 128, 00:0C:29:A3:E7:73, 0x00000000020c010b, 2345,00:0C:29:9d:37:76,0x00000000020c010b,2346);
+src::FastPSPSource(2, 1000000000, 128, 00:0C:29:9d:37:76, 0x00000000020c010b, 2345,00:0C:29:A3:E7:73,0x00000000020c010b,2346);
 t::Tee(8);
 rr::RoundRobinSched;
 src->BandwidthRatedUnqueue(25000)->t;
@@ -11,5 +11,5 @@ t[5] -> PrioritySub(5) -> Queue(20)-> [5]rr;
 t[6] -> PrioritySub(6) -> Queue(20)-> [6]rr;
 t[7] -> PrioritySub(7) -> Queue(20)-> [7]rr;
 
-rr -> PSPPrint() -> TimedSink(0.1);
+rr -> PSPPrint() -> ToDevice(eth2);
 
